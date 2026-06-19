@@ -5,11 +5,23 @@ description = ""
 authors = [
     {name = "Danil Shamsutdinov",email = "a.danil.dark@gmail.com"}
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
+    "pandas (>=3.0.3,<4.0.0)",
+    "requests (>=2.34.2,<3.0.0)",
+    "matplotlib (>=3.11.0,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "scipy (>=1.18.0,<2.0.0)",
+    "tqdm (>=4.68.3,<5.0.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipykernel (>=7.3.0,<8.0.0)"
+]
